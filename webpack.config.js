@@ -1,13 +1,15 @@
 const path = require('path');
 const webpack = require('webpack');
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = (env, options = {}) => {
   const config = {
     entry: {
-      app: ['@babel/polyfill', './src/index.js']
+      app: ['./src/index.js']
     },
     output: {
       filename: '[name].bundle.js',
@@ -58,8 +60,7 @@ module.exports = (env, options = {}) => {
     config.plugins = [
       new webpack.HotModuleReplacementPlugin(),
       new HtmlWebpackPlugin({
-        title: 'Development',
-        showErrors: true
+        template: 'example/index.html'
       })
     ];
 
@@ -73,18 +74,21 @@ module.exports = (env, options = {}) => {
       }
     };
   } else {
+    config.optimization = {
+      minimizer: [
+        new UglifyJsPlugin({
+          cache: true,
+          parallel: true,
+          sourceMap: false
+        }),
+        new OptimizeCSSAssetsPlugin({})
+      ]
+    };
+
     config.plugins = [
       new CleanWebpackPlugin(['dist'])
     ];
   }
-
-  config.plugins.push(
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify(options.mode)
-      }
-    })
-  );
 
   config.plugins.push(new MiniCssExtractPlugin());
 
