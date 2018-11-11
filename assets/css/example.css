@@ -13,14 +13,23 @@
   font-family: quicksand-bold;
   src: url('../font/quicksand-bold.ttf') format('truetype');
 }
+html, body {
+  height: 100%;
+}
 
 body {
   font-size: 16px;
   font-family: 'quicksand-regular';
 }
 body > div {
-    width: 100%;
-    text-align: center;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+body > div > div {
+  margin-bottom: 12px;
 }
 
 input[type=text] {

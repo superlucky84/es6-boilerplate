@@ -13,7 +13,6 @@ module.exports = {
   plugins: [],
   // add your custom rules here
   rules: {
-    indent: [2, 2, {SwitchCase: 1, ignoreComments: false, ImportDeclaration: 1, flatTernaryExpressions: false}],
-    'require-jsdoc': 0
+    indent: [2, 2, {SwitchCase: 1, ignoreComments: false, ImportDeclaration: 1, flatTernaryExpressions: false}]
   }
 };

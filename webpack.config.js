@@ -1,10 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = (env, options = {}) => {
   const config = {
@@ -18,6 +18,12 @@ module.exports = (env, options = {}) => {
     },
     module: {
       rules: [
+        {
+          enforce: 'pre',
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: 'eslint-loader'
+        },
         {
           test: /\.js$/,
           exclude: /node_modules/,
@@ -36,10 +42,7 @@ module.exports = (env, options = {}) => {
         },
         {
           test: /\.css$/,
-          use: [
-            MiniCssExtractPlugin.loader,
-            'css-loader'
-          ]
+          use: [MiniCssExtractPlugin.loader, 'css-loader']
         }
       ]
     },
@@ -81,13 +84,11 @@ module.exports = (env, options = {}) => {
           parallel: true,
           sourceMap: false
         }),
-        new OptimizeCSSAssetsPlugin({})
+        new OptimizeCSSAssetsPlugin()
       ]
     };
 
-    config.plugins = [
-      new CleanWebpackPlugin(['dist'])
-    ];
+    config.plugins = [new CleanWebpackPlugin(['dist'])];
   }
 
   config.plugins.push(new MiniCssExtractPlugin());
