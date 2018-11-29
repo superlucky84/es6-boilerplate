@@ -9,12 +9,15 @@
 
 #### Babel
 * @babel/polyfill
-* @babel/plugin-proposal-object-rest-spread
 * @babel/preset-env
+* @babel/plugin-proposal-object-rest-spread
+
 
 #### ESLint
-* config - [eslint-config-tui](https://github.com/nhnent/tui.eslint.config)
-* babel-eslint
+* [babel-eslint](https://github.com/babel/babel-eslint)
+* [eslint-config-tui](https://github.com/nhnent/tui.eslint.config)
+* [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
+* [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)
 
 #### Prettier
 
