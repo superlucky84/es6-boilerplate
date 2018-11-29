@@ -3,14 +3,14 @@
 ## Features
 
 #### Webpack
-* webpack-dev-server
-* html-webpack-plugin
-* optimize-css-assets-webpack-plugin
+* [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
+* [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin)
+* [optimize-css-assets-webpack-plugin](https://www.npmjs.com/package/optimize-css-assets-webpack-plugin)
 
 #### Babel
-* @babel/polyfill
-* @babel/preset-env
-* @babel/plugin-proposal-object-rest-spread
+* [@babel/polyfill](https://babeljs.io/docs/en/babel-polyfill)
+* [@babel/preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
+* [@babel/plugin-proposal-object-rest-spread](https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-object-rest-spread)
 
 
 #### ESLint
