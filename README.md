@@ -1,25 +1,38 @@
 # ES6 Boilerplate
 
 ## Features
+
 #### Webpack
-#### ECMAScript 6
+* webpack-dev-server
+* html-webpack-plugin
+* optimize-css-assets-webpack-plugin
+
 #### Babel
+* @babel/polyfill
+* @babel/plugin-proposal-object-rest-spread
+* @babel/preset-env
+
 #### ESLint
+* config - [eslint-config-tui](https://github.com/nhnent/tui.eslint.config)
+* babel-eslint
+
 #### Prettier
 
 ## Browser support
+
 #### Internet Explorer 9+
+
 - Supports all browsers that are ES5-compliant (IE8 and below are not supported).
 
 ## Getting started
 
 1. `git clone https://github.com/jinwoo-kim-nhn/es6-boilerplate.git`
-2.  리포 디렉토리에서 `npm install`
-3.  개발 서버 실행 `npm run dev`
+2. Inside repo directory run `npm install`
+3. Start the dev serve `npm run dev`
 4. Open http://localhost:8080
 
 ## Commands
-* `npm run dev` - 개발서버를 실행한다
-* `npm run lint` - eslint 실행한다
-* `npm run build` - production 모드로 번들파일을 만든다
-* `npm run build-dev` - development 모드로 번들파일을 만든다
+* `npm run dev` - start the dev serve
+* `npm run lint` - run an ESLint check
+* `npm run build` - create build in dist folder
+* `npm run build-dev` - create build for dev in dist folder
