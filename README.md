@@ -1,11 +1,15 @@
-# ES6 보일러플레이트
+# ES6 Boilerplate
 
 ## Features
-* Webpack
-* ECMAScript 6
-* Babel
-* ESLint
-* Prettier
+#### Webpack
+#### ECMAScript 6
+#### Babel
+#### ESLint
+#### Prettier
+
+## Browser support
+#### Internet Explorer 9+
+- Supports all browsers that are ES5-compliant (IE8 and below are not supported).
 
 ## Getting started
 
