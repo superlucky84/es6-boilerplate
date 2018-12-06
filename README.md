@@ -1,6 +1,6 @@
 # ES6 Boilerplate
 
-## Features
+## Included Modules
 
 #### Webpack
 * [webpack](https://webpack.js.org/)
@@ -27,16 +27,16 @@
 
 ## Browser support
 
-#### Internet Explorer 9+
+#### Supports all browsers that are ES5-compliant 
 
-- Supports all browsers that are ES5-compliant (IE8 and below are not supported).
+- IE8 and below are not supported
 
 ## Getting started
 
 1. `git clone https://github.com/jinwoo-kim-nhn/es6-boilerplate.git`
 2. Inside repo directory run `npm install`
-3. Start the dev serve `npm run dev`
-4. Open http://localhost:8080
+3. Run `npm run dev` to start the webpack-dev-server
+4. Open http://localhost:8080 in your browser.
 
 ## Commands
 * `npm run dev` - start the dev serve
