@@ -33,9 +33,18 @@
 
 ## Getting started
 
-1. Gets the git project. `git clone https://github.com/jinwoo-kim-nhn/es6-boilerplate.git`
-2. Inside repo directory run. `npm install`
-3. Run `npm run dev` to start the webpack-dev-server.
+1. Gets the git project. 
+```js
+  git clone https://github.com/jinwoo-kim-nhn/es6-boilerplate.git
+```
+2. Run the installation from the internal repo directory.
+```js
+  npm install
+```
+3. Start the webpack-dev-server.
+```js
+  npm run dev
+```
 4. Open http://localhost:8080 in your browser.
 
 ## Commands
