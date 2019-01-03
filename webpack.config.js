@@ -54,14 +54,13 @@ module.exports = (env, options = {}) => {
     plugins: [new MiniCssExtractPlugin()]
   };
 
-  if (options.mode === 'development') {
-    config.plugins = [
-      ...config.plugins,
-      new webpack.HotModuleReplacementPlugin(),
+  if (options.mode === 'development') {    
+    config.plugins.push(new webpack.HotModuleReplacementPlugin());
+    config.plugins.push(
       new HtmlWebpackPlugin({
         template: 'example/index.html'
       })
-    ];
+    );
 
     config.devtool = 'inline-source-map';
     config.devServer = {
