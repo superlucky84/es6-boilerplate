@@ -7,17 +7,20 @@ export class HelloWorld {
     this.buttonElement = element.querySelector('button');
     this.messageElement = element.querySelector('#message');
     this.inputElement.value = 'ES6';
-
     this.addEvent();
   }
 
   addEvent() {
-    this.buttonElement.addEventListener('click', this.announceMesaage.bind(this));
+    this.buttonElement.addEventListener('click', this.announceMessage.bind(this));
   }
 
-  announceMesaage() {
+  announceMessage() {
     const name = this.inputElement.value;
     const message = `Hello! ${name}!`;
     this.messageElement.innerHTML = message;
   }
+}
+
+if (process.env.NODE_ENV === 'development') {
+  window.helloWorld = new HelloWorld(document.getElementById('hello-world-control'));
 }
