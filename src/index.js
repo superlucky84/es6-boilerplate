@@ -7,6 +7,7 @@ export class HelloWorld {
     this.buttonElement = element.querySelector('button');
     this.messageElement = element.querySelector('#message');
     this.inputElement.value = 'ES6';
+
     this.addEvent();
   }
 
