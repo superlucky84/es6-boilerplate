@@ -89,7 +89,5 @@ module.exports = (env, options = {}) => {
     config.plugins.push(new CleanWebpackPlugin(['dist']));
   }
 
-  // config.plugins.push(new MiniCssExtractPlugin());
-
   return config;
 };
