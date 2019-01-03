@@ -21,6 +21,6 @@ export class HelloWorld {
   }
 }
 
-if (process.env.NODE_ENV === 'development') {
+if (document.getElementById('hello-world-control')) {
   window.helloWorld = new HelloWorld(document.getElementById('hello-world-control'));
 }

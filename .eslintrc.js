@@ -12,7 +12,5 @@ module.exports = {
   extends: ['tui/es6', 'plugin:prettier/recommended'],
   plugins: [],
   // add your custom rules here
-  rules: {
-    'no-process-env': 0
-  }
+  rules: {}
 };
